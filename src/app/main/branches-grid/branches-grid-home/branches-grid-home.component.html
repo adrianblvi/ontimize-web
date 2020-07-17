@@ -1,0 +1,21 @@
+<o-grid  #grid cols=3 title="{{ 'CUSTOMERS' | oTranslate }}" attr="branchesTable" service="branches" entity="branch"
+  keys="OFFICEID" columns="NAME;ADDRESS;STARTDATE;PHONE"
+  visible-columns="NAME;ADDRESS;STARTDATE;PHONE" pagination-controls="false" orderable=yes
+  sortable-columns="NAME;EMAIL" show-page-size="yes" page-size-options="24;32;64">
+  <o-grid-item *ngFor="let list of grid.dataArray">
+    <o-column layout-padding class="container-item">
+      <div class="domain">
+        <mat-icon>domain </mat-icon><span>{{ list.NAME }} </span>
+      </div>
+      <div class="address">
+        <mat-icon>location_city </mat-icon><span>{{ list.ADDRESS }}</span>
+      </div>
+      <div class="date">
+        <mat-icon>calendar_today </mat-icon><span>{{ list.STARTDATE }} </span>
+      </div>
+      <div class="phone">
+        <mat-icon>phone </mat-icon><span>{{ list.PHONE }}</span>
+      </div>
+    </o-column>
+  </o-grid-item>
+</o-grid>
