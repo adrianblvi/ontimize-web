@@ -1,11 +1,14 @@
 .container-item{
     width: 100%;
     height:100%;
-    .date,
-    .rate,
-    .type,
-    .card{
+    .name{
+      margin:8px 0;
       font-size: 0.9em;
+    }
+    .date,
+    .address,
+    .email{
+      font-size: 0.8em;
       display: flex;
       align-items: center;
       color:#4b4b4b;

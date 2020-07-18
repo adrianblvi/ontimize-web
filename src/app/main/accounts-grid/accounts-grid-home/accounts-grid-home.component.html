@@ -1,3 +1,29 @@
-<p>
-  accounts-grid-home works!
-</p>
+<o-grid #grid cols=3 title="{{ 'ACCOUNTS' | oTranslate }}" attr="accountsTable" service="branches" entity="account"
+  keys="ACCOUNTID" columns="ACCOUNTID;ENTITYID;OFFICEID;CDID;ANID;STARTDATE;ENDDATE;INTERESRATE;ACCOUNTTYP"
+  visible-columns="ENTITYID;OFFICEID;CDID;ANID;STARTDATE;ENDDATE;INTERESRATE;INTERESRATE_MONTHLY;ACCOUNTTYP"
+  pagination-controls="false" show-page-size="yes" page-size-options="24;32;64">
+  <o-grid-item *ngFor="let list of grid.dataArray">
+    <o-column layout-padding class="container-item">
+      <h4></h4>
+      <div class="card">
+        <mat-icon>credit_card </mat-icon><span> {{ list.ENTITYID }} {{ list.OFFICEID }} {{ list.CDID }}
+          {{ list.ANID }}</span>
+      </div>
+      <div class="date">
+        <mat-icon>calendar_today </mat-icon><span>{{ list.STARTDATE }} </span>
+      </div>
+      <div class="date">
+        <mat-icon>calendar_today </mat-icon><span>{{ list.ENDDATE }} </span>
+      </div>
+      <div class="rate">
+        <span>% Interés: {{ list.INTERESRATE }}</span>
+      </div>
+      <div class="rate">
+        <span>% Interés Mensual: {{ list.INTERESRATE_MONTHLY }} </span>
+      </div>
+      <div class="type">
+        <mat-icon>how_to_reg </mat-icon><span>{{ list.ACCOUNTTYP }} </span>
+      </div>
+    </o-column>
+  </o-grid-item>
+</o-grid>

@@ -1,0 +1,23 @@
+<o-grid #grid cols=3 title="{{ 'EMPLOYEES' | oTranslate }}" attr="employeesTable" service="employees" entity="employee"
+  keys="EMPLOYEEID"
+  columns="EMPLOYEEID;EMPLOYEENAME;EMPLOYEESURNAME;EMPLOYEEPHOTO;EMPLOYEEADDRESS;EMPLOYEESTARTDATE;EMPLOYEEEMAIL;OFFICEID;EMPLOYEETYPEID"
+  visible-columns="EMPLOYEEPHOTO;EMPLOYEENAME;EMPLOYEESURNAME;EMPLOYEEEMAIL;EMPLOYEEADDRESS;EMPLOYEESTARTDATE"
+  pagination-controls="false" orderable=yes sortable-columns="NAME;EMAIL" show-page-size="yes"
+  page-size-options="24;32;64">
+  <o-grid-item *ngFor="let list of grid.dataArray">
+    <o-column layout-padding class="container-item">
+      <o-image attr="image" empty-image="assets/images/no-image.png" style="margin-top:8px" data={{list.EMPLOYEEPHOTO}}>
+      </o-image>
+      <h4> {{list.EMPLOYEENAME}} {{list.EMPLOYEESURNAME}}</h4>
+      <div class="email">
+        <mat-icon>email </mat-icon><span>{{ list.EMPLOYEEEMAIL }}</span>
+      </div>
+      <div class="address">
+        <mat-icon>home </mat-icon><span>{{ list.EMPLOYEEADDRESS }} </span>
+      </div>
+      <div class="date">
+        <mat-icon>calendar_today </mat-icon><span>{{ list.EMPLOYEESTARTDATE }} </span>
+      </div>
+    </o-column>
+  </o-grid-item>
+</o-grid>

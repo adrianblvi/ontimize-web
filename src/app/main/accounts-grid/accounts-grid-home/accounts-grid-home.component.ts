@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { intRateMonthlyFunction } from '../../../shared/shared.module';
 
 @Component({
   selector: 'app-accounts-grid-home',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accounts-grid-home.component.scss']
 })
 export class AccountsGridHomeComponent implements OnInit {
-
+  public intRateMonthly = intRateMonthlyFunction;
   constructor() { }
 
   ngOnInit() {
