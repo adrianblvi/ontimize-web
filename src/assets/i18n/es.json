@@ -63,5 +63,8 @@
   "DATE_": "Fecha",
   "CONCEPT": "Concepto",
   "MOVEMENT": "Movimiento",
-  "MOVEMENTTYPEID": "Tipo movimiento"
+  "MOVEMENTTYPEID": "Tipo movimiento",
+  "VIEW_LIST":" Ver Lista",
+  "TABLE_VIEW": " Formato de tabla",
+  "GRID_VIEW": " Formato Grid "
 }
