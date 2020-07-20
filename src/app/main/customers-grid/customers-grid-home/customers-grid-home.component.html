@@ -4,7 +4,7 @@
   sortable-columns="NAME;EMAIL" show-page-size="yes" page-size-options="24;32;64">
   <o-grid-item *ngFor="let list of grid.dataArray">
     <o-column layout-padding class="container-item">
-      <o-image attr="employeeImage" empty-image="assets/images/no-image.png" style="margin-top:8px" data={{list.PHOTO}}>
+      <o-image attr="employeeImage" empty-image="assets/images/no-image.png" style="margin-top:6px" data={{list.PHOTO}}>
       </o-image>
       <h4> {{list.NAME}} {{list.SURNAME}}</h4>
       <div class="ID">
@@ -14,7 +14,7 @@
         <mat-icon>email </mat-icon><span>{{ list.EMAIL }}</span>
       </div>
       <div class="date">
-        <mat-icon>calendar_today </mat-icon><span>{{ list.STARTDATE }} </span>
+        <mat-icon>calendar_today </mat-icon><span>{{ list.STARTDATE | date:"dd/MM/yyyy h:mma" }} </span>
       </div>
     </o-column>
   </o-grid-item>

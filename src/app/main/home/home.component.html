@@ -72,11 +72,11 @@
         <h4>{{ 'CUSTOMERS' | oTranslate }}</h4>
         <p>{{ 'VIEW_LIST' | oTranslate }}:</p>
         <p>{{ 'TABLE_VIEW' | oTranslate }}: <button mat-icon-button color="accent"
-            aria-label="Example icon button with a menu icon">
+            aria-label="button" (click)="router.navigate(['/main/customers']);">
             <mat-icon>menu</mat-icon>
           </button>
           {{ 'GRID_VIEW' | oTranslate }}: <button mat-icon-button color="accent"
-            aria-label="Example icon button with a menu icon">
+            aria-label="button" (click)="router.navigate(['/main/customers-grid']);">
             <mat-icon>apps</mat-icon>
           </button></p>
 
@@ -91,11 +91,11 @@
         <h4>{{ 'EMPLOYEES' | oTranslate }}</h4>
         <p>{{ 'VIEW_LIST' | oTranslate }}:</p>
         <p>{{ 'TABLE_VIEW' | oTranslate }}: <button mat-icon-button color="accent"
-            aria-label="Example icon button with a menu icon">
+            aria-label="button" (click)="router.navigate(['/main/employees']);">
             <mat-icon>menu</mat-icon>
           </button>
           {{ 'GRID_VIEW' | oTranslate }}: <button mat-icon-button color="accent"
-            aria-label="Example icon button with a menu icon">
+            aria-label="button" (click)="router.navigate(['/main/employees-grid']);">
             <mat-icon>apps</mat-icon>
           </button></p>
       </div>
@@ -108,11 +108,11 @@
         <h4>{{ 'BRANCHES' | oTranslate }}</h4>
         <p>{{ 'VIEW_LIST' | oTranslate }}:</p>
         <p>{{ 'TABLE_VIEW' | oTranslate }}: <button mat-icon-button color="accent"
-            aria-label="Example"> 
+            aria-label="Example" (click)="router.navigate(['/main/branches']);"> 
             <mat-icon>menu</mat-icon>
           </button>
           {{ 'GRID_VIEW' | oTranslate }}: <button mat-icon-button color="accent"
-            aria-label="Example ">
+            aria-label="Example " (click)="router.navigate(['/main/branches-grid']);">
             <mat-icon>apps</mat-icon>
           </button></p>
       </div>
@@ -125,11 +125,11 @@
         <h4>{{ 'ACCOUNTS' | oTranslate }}</h4>
         <p>{{ 'VIEW_LIST' | oTranslate }}:</p>
         <p>{{ 'TABLE_VIEW' | oTranslate }}: <button mat-icon-button color="accent"
-            aria-label="Example icon button with a menu icon">
+            aria-label="button" (click)="router.navigate(['/main/accounts']);">
             <mat-icon>menu</mat-icon>
           </button>
           {{ 'GRID_VIEW' | oTranslate }}: <button mat-icon-button color="accent"
-            aria-label="Example icon button with a menu icon">
+            aria-label="button" (click)="router.navigate(['/main/accounts-grid']);">
             <mat-icon>apps</mat-icon>
           </button></p>
       </div>
